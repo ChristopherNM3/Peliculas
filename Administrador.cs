@@ -8,8 +8,10 @@ namespace Peliculas
 {
     class Administrador
     {
-        public int ID_administrador;
-        public string nombreAdministrador;
-        public string contraseña;
+        public int ID_administrador = 0;
+        public string nombreAdministrador = "administrador";
+        public string contraseña = "123";
+
+        
     }
 }

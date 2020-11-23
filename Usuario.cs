@@ -24,8 +24,15 @@ namespace Peliculas
         public string[] AccionPreguntas = new string[5];
         public string[] CrimenPreguntas = new string[5];
         public string[] Preguntas = new string[10];
-        public string[] imgPeliculas = new string[20];
-        public string[] peliMostrar = new string[20];
+        public string[] peliMostrar = new string[25];
+        public string[] peli_nmbMostrar = new string[25];
+        public int[] peli_IdMostrar = new int[25];
+
+
+        Pelicula pelicula = new Pelicula();
+        string[] imgPeliculas = new string[30];
+        string[] nmbPeliculas = new string[30];
+        int[] IDPeliculas = new int[30];
 
         public string[] pedirCuestionario()
         {
@@ -165,36 +172,25 @@ namespace Peliculas
 
         }
 
-        public string[] elegirPelicula()
+        public void elegirPelicula()
         { //Guardo la direccion de las imaganes en un arreglo, tu cambiaselas a donde las tengas
-            imgPeliculas[0] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/accion1.jpg";
-            imgPeliculas[1] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/accion2.jpg";
-            imgPeliculas[2] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/aventura1.jpg";
-            imgPeliculas[3] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/aventura2.jpg";
-            imgPeliculas[4] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/cf1.jpg";
-            imgPeliculas[5] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/cf2.jpg";
-            imgPeliculas[6] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/comedia1.jpg";
-            imgPeliculas[7] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/comedia2.jpg";
-            imgPeliculas[8] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/crimen1.jpg";
-            imgPeliculas[9] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/crimen2.jpg";
-            imgPeliculas[10] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/drama1.jpg";
-            imgPeliculas[11] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/drama2.jpg";
-            imgPeliculas[12] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/guerra1.jpg";
-            imgPeliculas[13] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/guerra2.jpg";
-            imgPeliculas[14] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/infantil1.jpg";
-            imgPeliculas[15] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/infantil2.jpg";
-            imgPeliculas[16] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/musical1.jpg";
-            imgPeliculas[17] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/musical2.jpg";
-            imgPeliculas[18] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/terror1.jpg";
-            imgPeliculas[19] = "C:/Users/Christopher/Desktop/Peliculas/peliculasimg/terror2.jpg";
+            string[] imgPeliculas = pelicula.imgPeliculas;
+            string[] nmbPeliculas = pelicula.nombrePeliculas;
+            int[] IDPeliculas = pelicula.ID_pelicula;
 
             if (contPeliculas < 6) //contPeliculas es un contador que va subiendo para en caso de llegar a 6 detenerse que es el maximo de peliculas que se muestran
             {
                 if (contDramaUs >= 2)
                 {
-                    peliMostrar[0] = imgPeliculas[10]; //se le asigna al arreglo una direccion con el link de la imagen
+                    peliMostrar[contPeliculas] = imgPeliculas[10]; //se le asigna al arreglo una direccion con el link de la imagen
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[10];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[10];
                     contPeliculas++; //aumenta el contador ya que se agrego una pelicula
+                    
+
                     peliMostrar[contPeliculas] = imgPeliculas[11];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[11];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[11];
                     contPeliculas++;
                 }
             }
@@ -204,8 +200,14 @@ namespace Peliculas
                 if (contAventuraUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[2];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[2];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[2];
                     contPeliculas++;
+          
+
                     peliMostrar[contPeliculas] = imgPeliculas[3];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[3];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[3];
                     contPeliculas++;
                 }
             }
@@ -215,8 +217,13 @@ namespace Peliculas
                 if (contCFUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[4];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[4];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[4];
                     contPeliculas++;
+
                     peliMostrar[contPeliculas] = imgPeliculas[5];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[5];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[5];
                     contPeliculas++;
                 }
 
@@ -227,8 +234,13 @@ namespace Peliculas
                 if (contComediaUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[6];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[6];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[6];
                     contPeliculas++;
+                    
                     peliMostrar[contPeliculas] = imgPeliculas[7];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[7];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[7];
                     contPeliculas++;
                 }
 
@@ -239,8 +251,13 @@ namespace Peliculas
                 if (contCrimenUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[8];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[8];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[8];
                     contPeliculas++;
+
                     peliMostrar[contPeliculas] = imgPeliculas[9];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[9];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[9];
                     contPeliculas++;
                 }
 
@@ -251,8 +268,13 @@ namespace Peliculas
                 if (contAccionUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[0];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[0];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[0];
                     contPeliculas++;
+
                     peliMostrar[contPeliculas] = imgPeliculas[1];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[1];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[1];
                     contPeliculas++;
                 }
 
@@ -263,8 +285,13 @@ namespace Peliculas
                 if (contGuerraUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[12];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[12];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[12];
                     contPeliculas++;
+
                     peliMostrar[contPeliculas] = imgPeliculas[13];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[13];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[13];
                     contPeliculas++;
                 }
 
@@ -275,8 +302,13 @@ namespace Peliculas
                 if (contInfantilesUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[14];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[14];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[14];
                     contPeliculas++;
+
                     peliMostrar[contPeliculas] = imgPeliculas[15];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[15];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[15];
                     contPeliculas++;
                 }
 
@@ -287,8 +319,13 @@ namespace Peliculas
                 if (contMusicalesUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[16];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[16];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[16];
                     contPeliculas++;
+
                     peliMostrar[contPeliculas] = imgPeliculas[17];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[17];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[17];
                     contPeliculas++;
                 }
 
@@ -299,13 +336,18 @@ namespace Peliculas
                 if (contTerrorUs >= 2)
                 {
                     peliMostrar[contPeliculas] = imgPeliculas[18];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[18];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[18];
                     contPeliculas++;
+
                     peliMostrar[contPeliculas] = imgPeliculas[19];
+                    peli_nmbMostrar[contPeliculas] = nmbPeliculas[19];
+                    peli_IdMostrar[contPeliculas] = IDPeliculas[19];
                     contPeliculas++;
                 }
 
             }
-            return peliMostrar; //regresa el arreglo con las direcciones de las imagenes
+            //regresa el arreglo con las direcciones de las imagenes
 
         }
     }
