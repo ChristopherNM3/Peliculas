@@ -36,8 +36,9 @@ namespace Peliculas
             this.label1 = new System.Windows.Forms.Label();
             this.durlabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.siplabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +57,7 @@ namespace Peliculas
             this.pictureBox1.Location = new System.Drawing.Point(26, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(210, 296);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -74,9 +76,9 @@ namespace Peliculas
             // 
             this.diclabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diclabel.ForeColor = System.Drawing.Color.White;
-            this.diclabel.Location = new System.Drawing.Point(277, 117);
+            this.diclabel.Location = new System.Drawing.Point(277, 94);
             this.diclabel.Name = "diclabel";
-            this.diclabel.Size = new System.Drawing.Size(477, 44);
+            this.diclabel.Size = new System.Drawing.Size(477, 31);
             this.diclabel.TabIndex = 16;
             this.diclabel.Text = "Director";
             this.diclabel.Click += new System.EventHandler(this.label1_Click);
@@ -85,7 +87,7 @@ namespace Peliculas
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(277, 177);
+            this.label1.Location = new System.Drawing.Point(278, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 24);
             this.label1.TabIndex = 17;
@@ -95,7 +97,7 @@ namespace Peliculas
             // 
             this.durlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.durlabel.ForeColor = System.Drawing.Color.White;
-            this.durlabel.Location = new System.Drawing.Point(364, 177);
+            this.durlabel.Location = new System.Drawing.Point(365, 141);
             this.durlabel.Name = "durlabel";
             this.durlabel.Size = new System.Drawing.Size(81, 24);
             this.durlabel.TabIndex = 18;
@@ -105,21 +107,21 @@ namespace Peliculas
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(277, 225);
+            this.label2.Location = new System.Drawing.Point(278, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 24);
             this.label2.TabIndex = 19;
             this.label2.Text = "Sipnosis:";
             // 
-            // label3
+            // siplabel
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(277, 261);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(496, 103);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "xd";
+            this.siplabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siplabel.ForeColor = System.Drawing.Color.White;
+            this.siplabel.Location = new System.Drawing.Point(277, 221);
+            this.siplabel.Name = "siplabel";
+            this.siplabel.Size = new System.Drawing.Size(496, 125);
+            this.siplabel.TabIndex = 20;
+            this.siplabel.Text = "xd";
             // 
             // button1
             // 
@@ -134,14 +136,25 @@ namespace Peliculas
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(403, 141);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 24);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "minutos";
+            // 
             // Mostrar_Descripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(800, 415);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.siplabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.durlabel);
             this.Controls.Add(this.label1);
@@ -167,7 +180,8 @@ namespace Peliculas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label durlabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label siplabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }

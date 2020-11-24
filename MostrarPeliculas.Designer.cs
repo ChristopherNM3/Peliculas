@@ -42,12 +42,7 @@ namespace Peliculas
             this.nmb5 = new System.Windows.Forms.Label();
             this.nmb6 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.idlabel1 = new System.Windows.Forms.Label();
-            this.idlabel3 = new System.Windows.Forms.Label();
-            this.idlabel2 = new System.Windows.Forms.Label();
-            this.idlabel4 = new System.Windows.Forms.Label();
-            this.idlabel5 = new System.Windows.Forms.Label();
-            this.idlabel6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,6 +70,7 @@ namespace Peliculas
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -84,6 +80,7 @@ namespace Peliculas
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -93,6 +90,7 @@ namespace Peliculas
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // nmb1
             // 
@@ -132,6 +130,7 @@ namespace Peliculas
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -141,6 +140,7 @@ namespace Peliculas
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 8;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // nmb4
             // 
@@ -177,63 +177,23 @@ namespace Peliculas
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(70)))), ((int)(((byte)(88)))));
             this.pictureBox7.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(802, 32);
+            this.pictureBox7.Size = new System.Drawing.Size(802, 43);
             this.pictureBox7.TabIndex = 12;
             this.pictureBox7.TabStop = false;
             // 
-            // idlabel1
+            // button1
             // 
-            this.idlabel1.AutoSize = true;
-            this.idlabel1.Location = new System.Drawing.Point(104, 46);
-            this.idlabel1.Name = "idlabel1";
-            this.idlabel1.Size = new System.Drawing.Size(35, 13);
-            this.idlabel1.TabIndex = 13;
-            this.idlabel1.Text = "label1";
-            // 
-            // idlabel3
-            // 
-            this.idlabel3.AutoSize = true;
-            this.idlabel3.Location = new System.Drawing.Point(649, 46);
-            this.idlabel3.Name = "idlabel3";
-            this.idlabel3.Size = new System.Drawing.Size(35, 13);
-            this.idlabel3.TabIndex = 14;
-            this.idlabel3.Text = "label1";
-            // 
-            // idlabel2
-            // 
-            this.idlabel2.AutoSize = true;
-            this.idlabel2.Location = new System.Drawing.Point(383, 46);
-            this.idlabel2.Name = "idlabel2";
-            this.idlabel2.Size = new System.Drawing.Size(35, 13);
-            this.idlabel2.TabIndex = 15;
-            this.idlabel2.Text = "label1";
-            // 
-            // idlabel4
-            // 
-            this.idlabel4.AutoSize = true;
-            this.idlabel4.Location = new System.Drawing.Point(104, 392);
-            this.idlabel4.Name = "idlabel4";
-            this.idlabel4.Size = new System.Drawing.Size(35, 13);
-            this.idlabel4.TabIndex = 16;
-            this.idlabel4.Text = "label1";
-            // 
-            // idlabel5
-            // 
-            this.idlabel5.AutoSize = true;
-            this.idlabel5.Location = new System.Drawing.Point(383, 392);
-            this.idlabel5.Name = "idlabel5";
-            this.idlabel5.Size = new System.Drawing.Size(35, 13);
-            this.idlabel5.TabIndex = 17;
-            this.idlabel5.Text = "label1";
-            // 
-            // idlabel6
-            // 
-            this.idlabel6.AutoSize = true;
-            this.idlabel6.Location = new System.Drawing.Point(649, 392);
-            this.idlabel6.Name = "idlabel6";
-            this.idlabel6.Size = new System.Drawing.Size(35, 13);
-            this.idlabel6.TabIndex = 18;
-            this.idlabel6.Text = "label1";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(44)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(680, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 29);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MostrarPeliculas
             // 
@@ -241,12 +201,7 @@ namespace Peliculas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(800, 749);
-            this.Controls.Add(this.idlabel6);
-            this.Controls.Add(this.idlabel5);
-            this.Controls.Add(this.idlabel4);
-            this.Controls.Add(this.idlabel2);
-            this.Controls.Add(this.idlabel3);
-            this.Controls.Add(this.idlabel1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.nmb6);
             this.Controls.Add(this.nmb5);
@@ -271,7 +226,6 @@ namespace Peliculas
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -290,11 +244,6 @@ namespace Peliculas
         private System.Windows.Forms.Label nmb5;
         private System.Windows.Forms.Label nmb6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label idlabel1;
-        private System.Windows.Forms.Label idlabel3;
-        private System.Windows.Forms.Label idlabel2;
-        private System.Windows.Forms.Label idlabel4;
-        private System.Windows.Forms.Label idlabel5;
-        private System.Windows.Forms.Label idlabel6;
+        private System.Windows.Forms.Button button1;
     }
 }

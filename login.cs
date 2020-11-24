@@ -12,7 +12,7 @@ namespace Peliculas
 {
     public partial class login : Form
     {
-        public static string usuario;
+        Usuario usuario = new Usuario();
         public login()
         {
             InitializeComponent();
@@ -45,11 +45,15 @@ namespace Peliculas
 
         private void ingresar_btn_Click(object sender, EventArgs e)
         {
-            usuario = ingresar_btn.Text;
             Cuestionario1 frm = new Cuestionario1();
             frm.Show();
             this.Hide();
 
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            usuario.reinciar();
         }
     }
 }

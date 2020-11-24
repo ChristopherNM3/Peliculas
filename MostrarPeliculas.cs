@@ -12,14 +12,27 @@ namespace Peliculas
 {
     public partial class MostrarPeliculas : Form
     {
-        
+
         Usuario usuario = new Usuario();
         Pelicula pelicula = new Pelicula();
         Random random = new Random();
-        public string idPeli;
+        public int idPeli;
+        public static int idPelist =0;
+        public int idRecomendacion1, idRecomendacion2, idRecomendacion3, idRecomendacion4, idRecomendacion5, idRecomendacion6;
+
+
+
         public MostrarPeliculas()
         {
-
+            usuario.elegirPelicula();
+            int[] ID_peliculas = usuario.peli_IdMostrar;
+            idRecomendacion1 = ID_peliculas[0];
+            idRecomendacion2 = ID_peliculas[1];
+            idRecomendacion3 = ID_peliculas[2];
+            idRecomendacion4 = ID_peliculas[3];
+            idRecomendacion5 = ID_peliculas[4];
+            idRecomendacion6 = ID_peliculas[5];
+            darIpPelicula(idPelist);
             InitializeComponent();
         }
 
@@ -28,7 +41,8 @@ namespace Peliculas
             usuario.elegirPelicula(); //Pide las peliculas
             string[] img_peliculas = usuario.peliMostrar;
             string[] nmb_peliculas = usuario.peli_nmbMostrar;
-            int[] ID_peliculas = usuario.peli_IdMostrar;
+            
+
 
             pictureBox1.Image = Image.FromFile(img_peliculas[0]); //Carga las imagenes de las peliculas
             pictureBox2.Image = Image.FromFile(img_peliculas[1]);
@@ -44,24 +58,80 @@ namespace Peliculas
             nmb5.Text = nmb_peliculas[4].ToString();
             nmb6.Text = nmb_peliculas[5].ToString();
 
-            idlabel1.Text = ID_peliculas[0].ToString();
-            idlabel2.Text = ID_peliculas[1].ToString();
-            idlabel3.Text = ID_peliculas[2].ToString();
-            idlabel4.Text = ID_peliculas[3].ToString();
-            idlabel5.Text = ID_peliculas[4].ToString();
-            idlabel6.Text = ID_peliculas[5].ToString();
-
-
+            
             //pictureBox1.Image = Image.FromFile("C:/Users/Christopher/Desktop/Peliculas/Resources/peliculas/drama1.jpg");
 
         }
 
+
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            idPeli = idlabel1.Text;
             Mostrar_Descripciones frm = new Mostrar_Descripciones();
+            idPelist = idRecomendacion1;
+            darIpPelicula(idPelist);
             frm.Show();
             this.Hide();
+        }
+
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Mostrar_Descripciones frm = new Mostrar_Descripciones();
+            idPelist = idRecomendacion2;
+            darIpPelicula(idPelist);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            login frm = new login();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Mostrar_Descripciones frm = new Mostrar_Descripciones();
+            idPelist = idRecomendacion3;
+            darIpPelicula(idPelist);
+            frm.Show();
+            this.Hide();
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Mostrar_Descripciones frm = new Mostrar_Descripciones();
+            idPelist = idRecomendacion4;
+            darIpPelicula(idPelist);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Mostrar_Descripciones frm = new Mostrar_Descripciones();
+            idPelist = idRecomendacion5;
+            darIpPelicula(idPelist);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Mostrar_Descripciones frm = new Mostrar_Descripciones();
+            idPelist = idRecomendacion6;
+            darIpPelicula(idPelist);
+            frm.Show();
+            this.Hide();
+
+        }
+
+        public void darIpPelicula(int num)
+        {
+            idPeli = num;
         }
     }
 }

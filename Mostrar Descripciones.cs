@@ -12,6 +12,8 @@ namespace Peliculas
 {
     public partial class Mostrar_Descripciones : Form
     {
+        public static int idPeli;
+        Descripcion descripcion = new Descripcion();
         public Mostrar_Descripciones()
         {
             InitializeComponent();
@@ -19,9 +21,16 @@ namespace Peliculas
 
         private void Mostrar_Descripciones_Load(object sender, EventArgs e)
         {
+            
             MostrarPeliculas mostrarPeli = new MostrarPeliculas();
-            string idPeli = mostrarPeli.idPeli;
+            idPeli = mostrarPeli.idPeli;
+            string[] descripcionPelicula = descripcion.pedirDescripcion(idPeli);
 
+            pictureBox1.Image = Image.FromFile(descripcionPelicula[0]);
+            nmblabel.Text = descripcionPelicula[1];
+            diclabel.Text = descripcionPelicula[2];
+            durlabel.Text = descripcionPelicula[3];
+            siplabel.Text = descripcionPelicula[4];
 
 
         }

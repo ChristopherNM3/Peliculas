@@ -12,7 +12,7 @@ namespace Peliculas
         public string nombre_usuario;
         private Random random = new Random();
         int contPeliculas = 0;
-        public static int contDramaUs=0, contMusicalesUs = 0, contInfantilesUs = 0, contComediaUs = 0, contCFUs = 0, contAventuraUs = 0, contGuerraUs = 0, contTerrorUs = 0, contAccionUs = 0, contCrimenUs = 0;
+        public static int contDramaUs = 0, contMusicalesUs = 0, contInfantilesUs = 0, contComediaUs = 0, contCFUs = 0, contAventuraUs = 0, contGuerraUs = 0, contTerrorUs = 0, contAccionUs = 0, contCrimenUs = 0;
         public string[] DramaPreguntas = new string[5];
         public string[] MusicalesPreguntas = new string[5];
         public string[] InfantilesPreguntas = new string[5];
@@ -109,15 +109,15 @@ namespace Peliculas
             Preguntas[8] = AccionPreguntas[random.Next(0, 4)];
             Preguntas[9] = CrimenPreguntas[random.Next(0, 4)];
 
-            
+
             return Preguntas; //regresa un arreglo con las preguntas elegidas al azar
-            
+
 
         }
 
         public void hacerCuestionario(bool contDrama, bool contMusicales, bool contInfantiles, bool contComedia, bool contCF, bool contAventura, bool contGuerra, bool contTerror, bool contAccion, bool contCrimen)
         {
-            if(contDrama == true) //En el cuestionario si eligio "si" entonces se recibe un true que aumenta el contador de la categoria asociada a la pregunta
+            if (contDrama == true) //En el cuestionario si eligio "si" entonces se recibe un true que aumenta el contador de la categoria asociada a la pregunta
             {
                 contDramaUs++;
             }
@@ -186,7 +186,7 @@ namespace Peliculas
                     peli_nmbMostrar[contPeliculas] = nmbPeliculas[10];
                     peli_IdMostrar[contPeliculas] = IDPeliculas[10];
                     contPeliculas++; //aumenta el contador ya que se agrego una pelicula
-                    
+
 
                     peliMostrar[contPeliculas] = imgPeliculas[11];
                     peli_nmbMostrar[contPeliculas] = nmbPeliculas[11];
@@ -195,7 +195,7 @@ namespace Peliculas
                 }
             }
 
-            if(contPeliculas < 6)
+            if (contPeliculas < 6)
             {
                 if (contAventuraUs >= 2)
                 {
@@ -203,7 +203,7 @@ namespace Peliculas
                     peli_nmbMostrar[contPeliculas] = nmbPeliculas[2];
                     peli_IdMostrar[contPeliculas] = IDPeliculas[2];
                     contPeliculas++;
-          
+
 
                     peliMostrar[contPeliculas] = imgPeliculas[3];
                     peli_nmbMostrar[contPeliculas] = nmbPeliculas[3];
@@ -237,7 +237,7 @@ namespace Peliculas
                     peli_nmbMostrar[contPeliculas] = nmbPeliculas[6];
                     peli_IdMostrar[contPeliculas] = IDPeliculas[6];
                     contPeliculas++;
-                    
+
                     peliMostrar[contPeliculas] = imgPeliculas[7];
                     peli_nmbMostrar[contPeliculas] = nmbPeliculas[7];
                     peli_IdMostrar[contPeliculas] = IDPeliculas[7];
@@ -349,6 +349,20 @@ namespace Peliculas
             }
             //regresa el arreglo con las direcciones de las imagenes
 
+        } 
+        public void reinciar()
+        {
+            contAccionUs = 0;
+            contAventuraUs = 0;
+            contCFUs = 0;
+            contComediaUs = 0;
+            contCrimenUs = 0;
+            contDramaUs = 0;
+            contGuerraUs = 0;
+            contInfantilesUs = 0;
+            contMusicalesUs = 0;
+            contPeliculas = 0;
+            contTerrorUs = 0;
         }
     }
 }
