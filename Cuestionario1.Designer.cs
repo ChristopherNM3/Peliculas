@@ -71,7 +71,6 @@ namespace Peliculas
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siguiente_btn = new System.Windows.Forms.Button();
-            this.contador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -580,23 +579,12 @@ namespace Peliculas
             this.siguiente_btn.UseVisualStyleBackColor = false;
             this.siguiente_btn.Click += new System.EventHandler(this.siguiente_btn_Click);
             // 
-            // contador
-            // 
-            this.contador.AutoSize = true;
-            this.contador.ForeColor = System.Drawing.SystemColors.Control;
-            this.contador.Location = new System.Drawing.Point(751, 574);
-            this.contador.Name = "contador";
-            this.contador.Size = new System.Drawing.Size(35, 13);
-            this.contador.TabIndex = 45;
-            this.contador.Text = "label1";
-            // 
             // Cuestionario1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1084, 625);
-            this.Controls.Add(this.contador);
             this.Controls.Add(this.siguiente_btn);
             this.Controls.Add(this.checkBox17);
             this.Controls.Add(this.si10);
@@ -702,6 +690,5 @@ namespace Peliculas
         private System.Windows.Forms.Label pregunta10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button siguiente_btn;
-        private System.Windows.Forms.Label contador;
     }
 }

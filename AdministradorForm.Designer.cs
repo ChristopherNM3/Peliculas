@@ -33,19 +33,20 @@ namespace Peliculas
             this.ingresar_btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.idtxt = new System.Windows.Forms.TextBox();
             this.idlbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nmbtxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.duraciontxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.directortxt = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.sipnosistxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.imagentxt = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@ namespace Peliculas
             this.ingresar_btn.TabIndex = 14;
             this.ingresar_btn.Text = "Eliminar";
             this.ingresar_btn.UseVisualStyleBackColor = false;
+            this.ingresar_btn.Click += new System.EventHandler(this.ingresar_btn_Click);
             // 
             // button1
             // 
@@ -81,6 +83,7 @@ namespace Peliculas
             this.button1.TabIndex = 15;
             this.button1.Text = "Modificar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -93,15 +96,16 @@ namespace Peliculas
             this.button2.TabIndex = 16;
             this.button2.Text = "Insertar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox2
+            // idtxt
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(25, 64);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(73, 23);
-            this.textBox2.TabIndex = 17;
+            this.idtxt.BackColor = System.Drawing.Color.White;
+            this.idtxt.Location = new System.Drawing.Point(25, 64);
+            this.idtxt.Multiline = true;
+            this.idtxt.Name = "idtxt";
+            this.idtxt.Size = new System.Drawing.Size(73, 23);
+            this.idtxt.TabIndex = 17;
             // 
             // idlbl
             // 
@@ -114,14 +118,14 @@ namespace Peliculas
             this.idlbl.TabIndex = 18;
             this.idlbl.Text = "Introduzca ID";
             // 
-            // textBox1
+            // nmbtxt
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(218, 64);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(355, 23);
-            this.textBox1.TabIndex = 19;
+            this.nmbtxt.BackColor = System.Drawing.Color.White;
+            this.nmbtxt.Location = new System.Drawing.Point(218, 64);
+            this.nmbtxt.Multiline = true;
+            this.nmbtxt.Name = "nmbtxt";
+            this.nmbtxt.Size = new System.Drawing.Size(355, 23);
+            this.nmbtxt.TabIndex = 19;
             // 
             // label1
             // 
@@ -145,14 +149,14 @@ namespace Peliculas
             this.label2.TabIndex = 22;
             this.label2.Text = "Duración";
             // 
-            // textBox3
+            // duraciontxt
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(218, 198);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(134, 23);
-            this.textBox3.TabIndex = 21;
+            this.duraciontxt.BackColor = System.Drawing.Color.White;
+            this.duraciontxt.Location = new System.Drawing.Point(218, 198);
+            this.duraciontxt.Multiline = true;
+            this.duraciontxt.Name = "duraciontxt";
+            this.duraciontxt.Size = new System.Drawing.Size(134, 23);
+            this.duraciontxt.TabIndex = 21;
             // 
             // label3
             // 
@@ -166,14 +170,14 @@ namespace Peliculas
             this.label3.Text = "Director";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox4
+            // directortxt
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(218, 129);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(355, 23);
-            this.textBox4.TabIndex = 23;
+            this.directortxt.BackColor = System.Drawing.Color.White;
+            this.directortxt.Location = new System.Drawing.Point(218, 129);
+            this.directortxt.Multiline = true;
+            this.directortxt.Name = "directortxt";
+            this.directortxt.Size = new System.Drawing.Size(355, 23);
+            this.directortxt.TabIndex = 23;
             // 
             // button3
             // 
@@ -186,6 +190,7 @@ namespace Peliculas
             this.button3.TabIndex = 25;
             this.button3.Text = "Verificar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -198,14 +203,14 @@ namespace Peliculas
             this.label4.TabIndex = 27;
             this.label4.Text = "Sipnosis";
             // 
-            // textBox5
+            // sipnosistxt
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(631, 129);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(355, 92);
-            this.textBox5.TabIndex = 26;
+            this.sipnosistxt.BackColor = System.Drawing.Color.White;
+            this.sipnosistxt.Location = new System.Drawing.Point(631, 129);
+            this.sipnosistxt.Multiline = true;
+            this.sipnosistxt.Name = "sipnosistxt";
+            this.sipnosistxt.Size = new System.Drawing.Size(355, 92);
+            this.sipnosistxt.TabIndex = 26;
             // 
             // label5
             // 
@@ -218,14 +223,28 @@ namespace Peliculas
             this.label5.TabIndex = 29;
             this.label5.Text = "Ruta imagen";
             // 
-            // textBox6
+            // imagentxt
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(631, 64);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(355, 23);
-            this.textBox6.TabIndex = 28;
+            this.imagentxt.BackColor = System.Drawing.Color.White;
+            this.imagentxt.Location = new System.Drawing.Point(631, 64);
+            this.imagentxt.Multiline = true;
+            this.imagentxt.Name = "imagentxt";
+            this.imagentxt.Size = new System.Drawing.Size(355, 23);
+            this.imagentxt.TabIndex = 28;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(44)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(885, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 32);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "Salir";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // AdministradorForm
             // 
@@ -233,19 +252,20 @@ namespace Peliculas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(998, 342);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.imagentxt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.sipnosistxt);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.directortxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.duraciontxt);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nmbtxt);
             this.Controls.Add(this.idlbl);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.idtxt);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ingresar_btn);
@@ -253,6 +273,7 @@ namespace Peliculas
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "AdministradorForm";
             this.Text = "AdministradorForm";
+            this.Load += new System.EventHandler(this.AdministradorForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,18 +286,19 @@ namespace Peliculas
         private System.Windows.Forms.Button ingresar_btn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox idtxt;
         private System.Windows.Forms.Label idlbl;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nmbtxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox duraciontxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox directortxt;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox sipnosistxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox imagentxt;
+        private System.Windows.Forms.Button button4;
     }
 }

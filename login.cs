@@ -13,6 +13,7 @@ namespace Peliculas
     public partial class login : Form
     {
         Usuario usuario = new Usuario();
+        Administrador admi = new Administrador();
         public login()
         {
             InitializeComponent();
@@ -45,15 +46,34 @@ namespace Peliculas
 
         private void ingresar_btn_Click(object sender, EventArgs e)
         {
-            Cuestionario1 frm = new Cuestionario1();
-            frm.Show();
-            this.Hide();
+            if(textBox1.Text == admi.nombreAdministrador && textBox2.Text == admi.contraseña)
+            {
+                AdministradorForm frm1 = new AdministradorForm();
+                frm1.Show();
+                this.Hide();
+            }
+            else
+            {
+                Cuestionario1 frm = new Cuestionario1();
+                frm.Show();
+                this.Hide();
+            }
+
+
 
         }
 
         private void login_Load(object sender, EventArgs e)
         {
             usuario.reinciar();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Cuestionario1 frm = new Cuestionario1();
+            frm.Show();
+            this.Hide();
+
         }
     }
 }

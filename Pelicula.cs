@@ -65,25 +65,43 @@ namespace Peliculas
 
 
         }
-        public void insertar()
+        public void insertar(string img, string nombre, string director, string duracion, string sipnosis)
         {
+            Descripcion descripcion = new Descripcion();
+            imgPeliculas[20] = img;
+            nombrePeliculas[20] = nombre;
+            descripcion.director[20] = director;
+            descripcion.duracion[20] = duracion;
+            descripcion.sipsosis[20] = sipnosis;
 
         }
 
-        public void eliminar()
+        public void eliminar(int id, string img, string nombre, string director, string duracion, string sipnosis)
         {
+            Descripcion descripcion = new Descripcion();
+            imgPeliculas[id] = "";
+            nombrePeliculas[id] = "";
+            descripcion.director[id] = "";
+            descripcion.duracion[id] = "";
+            descripcion.sipsosis[id] = "";
 
         }
 
-        public void modificar()
+        public void modificar(int id,string img,string nombre,string director,string duracion,string sipnosis)
         {
-
-        }
-
-        public void mostrar()
-        {
+            Descripcion descripcion = new Descripcion();
+            imgPeliculas[id] = img;
+            nombrePeliculas[id] = nombre;
+            descripcion.director[id] = director;
+            descripcion.duracion[id] = duracion;
+            descripcion.sipsosis[id] = sipnosis;
             
+
+
+
+
         }
+
     }
     
 }

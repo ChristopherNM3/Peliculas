@@ -103,6 +103,7 @@ namespace Peliculas
             string[] nmb_pelicula = pelicula.nombrePeliculas;
             string[] img_pelicula = pelicula.imgPeliculas;
             string[] descripcionPelicula = new string[10];
+
             descripcionPelicula[0] = img_pelicula[id];
             descripcionPelicula[1] = nmb_pelicula[id];
             descripcionPelicula[2] = director[id];
